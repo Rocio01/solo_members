@@ -7,11 +7,19 @@
     <ul class="navbar-nav mr-auto">
 
       <li>
-         <%= link_to 'Posts', root_path, class: "navbar-brand " %>
+         <%= link_to 'Posts App', root_path, class: "navbar-brand " %>
       </li>
 
       <li >
          <%= link_to 'About', home_about_path, class:"navbar-brand" %>
+      </li>
+
+      <li >
+         <%= link_to 'Posts', posts_path, class:"navbar-brand" %>
+      </li>
+
+      <li >
+         <%= link_to 'Create Post', new_post_path, class:"navbar-brand" %>
       </li>
     
     </ul>
