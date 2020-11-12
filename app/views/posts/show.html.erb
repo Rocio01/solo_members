@@ -1,19 +1,42 @@
 <%# < id="notice"><%= notice %>
+<br/>
+<br/>
+<div class="card" style="max-width: 40rem;">
+  <div class="card-header bg-info " style="max-width: 40rem;">
+    <p class=" text-white">
+    <strong>
+      <%= @post.title %>
+    </strong>
+   </p>
+  </div>
+  <div class="card-body" style="max-width: 40rem;">
+    <blockquote class="blockquote mb-0">
+    <p>
+      <%= @post.body %>
+   </p>
+      <footer >
+       
+      
+      <% if user_signed_in? %>
+           
+        <p>
+            <strong>Author:</strong>
+            <%= @post.author %>
+        </p>
+    <% end %>
+   
+    </footer>
+    </blockquote>
+  </div>
+</div>
+<br/>
 
-<p>
-  <strong>Title:</strong>
-  <%= @post.title %>
-</p>
+  <button type="button" class="btn btn-dark"><%= link_to 'Edit', edit_post_path(@post) %> </button>
+  <button type="button" class="btn btn-info"><%= link_to 'Back', posts_path %></button>
 
-<p>
-  <strong>Body:</strong>
-  <%= @post.body %>
-</p>
 
-<p>
-  <strong>Author:</strong>
-  <%= @post.author %>
-</p>
 
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+
+
+
+

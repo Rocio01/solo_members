@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, except: [:show, :index]
-  before_action :correct_user, only: [:edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:index, :show ]
+  # before_action :correct_user, only: [:edit, :update, :destroy]
   # GET /posts
   # GET /posts.json
   def index
@@ -15,7 +15,8 @@ class PostsController < ApplicationController
 
   # GET /posts/new
   def new
-    @post = Post.new
+     @post = Post.new
+    # @post = current_user.posts.build
   end
 
   # GET /posts/1/edit
@@ -26,7 +27,7 @@ class PostsController < ApplicationController
   # POST /posts.json
   def create
     @post = Post.new(post_params)
-
+    # @post = current_user.posts.build(post_params)
     respond_to do |format|
       if @post.save
         format.html { redirect_to @post, notice: 'Post was successfully created.' }
@@ -62,10 +63,10 @@ class PostsController < ApplicationController
     end
   end
 
-  def correct_user
-    @post = current_user.posts.find_by(id: params[:id]) 
-    redirect_to posts_path, notice: "Not authorized" if (@post).nil?
-  end
+  #  def correct_user
+  #  @post = current_user.posts.find_by(id: params[:id]) 
+  #   redirect_to posts_path, notice: "Not authorized" if (@post).nil?
+  #  end
 
   private
     # Use callbacks to share common setup or constraints between actions.
