@@ -30,9 +30,10 @@
   </div>
 </div>
 <br/>
-
-  <button type="button" class="btn btn-dark"><%= link_to 'Edit', edit_post_path(@post) %> </button>
-  <button type="button" class="btn btn-info"><%= link_to 'Back', posts_path %></button>
+<% if user_signed_in? %>
+  <button type="button" class="btn btn-dark"><%= link_to 'Edit', edit_post_path(@post), class:"text-white" %> </button>
+<% end %>
+  <button type="button" class="btn btn-info "><%= link_to 'Back', posts_path, class:"text-white" %></button>
 
 
 
