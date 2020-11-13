@@ -42,7 +42,7 @@
 
 ## GitHub Repo
 
--  https://github.com/Rocio01/re-former
+-  https://github.com/Rocio01/solo_members
 
 
 
