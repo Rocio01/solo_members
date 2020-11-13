@@ -1,4 +1,4 @@
-# [Twitter clone]
+# Members Only!
 
 -  I built an exclusive clubhouse app where the members can write embarrassing posts about non-members. Inside the clubhouse, members can see who the author of a post is but, outside, they can only see the story and wonder who wrote it, using Ruby on Rails
 
