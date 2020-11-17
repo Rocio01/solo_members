@@ -18,7 +18,7 @@
         <% if user_signed_in? %>
           <p>
             <strong>Author:</strong>
-            <%= @post.author %>
+            <%= @post.user.username %>
           </p>
         <% end %>
       </footer>

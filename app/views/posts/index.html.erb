@@ -1,4 +1,4 @@
-<%# < id="notice"><%= notice %>
+<% # < id="notice"><%= notice %>
 <br/>
 <h2>Posts</h2>
 <br/>
@@ -21,12 +21,12 @@
             <td><%= post.title %></td>
             <td><%= post.body %></td>
             <% if user_signed_in? %>
-              <td><%= post.author %></td>
+              <td><%= post.user.username %></td>
             <% elsif post.user == current_user %>
-              <td><%= link_to 'Edit', edit_post_path(post) %></td>
-              <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              <td><%= link_to "Edit", edit_post_path(post) %></td>
+              <td><%= link_to "Destroy", post, method: :delete, data: { confirm: "Are you sure?" } %></td>
             <% end %>
-            <td><%= link_to 'Show', @post %></td>
+            <td><%= link_to "Show", @post %></td>
           </tr>
         <% end %>
       </tr>
@@ -39,4 +39,4 @@
     </tbody>
   </table>
   <br>
-  <button type="button" class="btn btn-info "><%= link_to 'New Post', new_post_path, class:"text-white"%></button>
+  <button type="button" class="btn btn-info "><%= link_to "New Post", new_post_path, class: "text-white" %></button>
