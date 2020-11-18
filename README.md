@@ -53,6 +53,12 @@
 - Linkedin: [zulma-rocio-martinez](https://www.linkedin.com/in/zulma-rocio-martinez)
 
 
+👤 **karthick harimoorthy**
+
+- Github: [@karthykarthick](https://github.com/karthykarthick)
+
+- Linkedin: [zulma-rocio-martinez](https://www.linkedin.com/in/karthick-harimoorthy/)
+
 ## Acknowledgments
 
 - Microverse
