@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  devise_for :users, :controllers => {registration: "registrations"}
+  devise_for :users, :controllers => {registrations: 'registrations'}
   resources :posts
-  resources :posts, only: [:new, :create, :index]
+  # resources :posts, only: [:new, :create, :index]
   # get 'home/index'
   root 'home#index'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
